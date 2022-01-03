@@ -3,6 +3,7 @@ $container: 1280px;
 .container {
   max-width: $container;
   margin: 0 auto;
+  position: relative;
 }
 
 .flex__between {
@@ -13,13 +14,16 @@ $container: 1280px;
 
 .nav {
   height: 3.5rem;
-  position: relative;
   margin: 0 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .nav__links {
   display: flex;
-  gap: 0.2rem;
+  gap: 0.3rem;
 }
 
 .nav__button {
@@ -27,31 +31,75 @@ $container: 1280px;
   color: #181b21;
   border-radius: 15px;
   font-weight: 500;
+  font-size: 1.1rem;
   &:hover {
     background-color: rgb(128, 128, 128, 0.2);
     transition: 0.5s ease-in-out;
   }
+  + button {
+    background: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+}
+
+.bg__paralax {
+  background-image: url("/Assets/home-1.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main {
-  height: 90vh;
-  display: flex;
+  height: 100vh;
+  justify-content: center;
 }
 
 .main__container {
-  width: fit-content;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.main__title {
   text-align: center;
+  h1 {
+    margin-bottom: 0.2rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-shadow: 0 0 0.1px black;
+    }
+  }
 }
 
 .main__buttons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 1.5rem;
   button {
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
+    width: 16rem;
+    padding: 0.8rem 2rem;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    &:first-of-type {
+      opacity: 1;
+      font-weight: bold;
+      color: white;
+      background-color: rgba(23, 26, 32, 0.8);
+    }
+    &:last-of-type {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
   }
 }
 

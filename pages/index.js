@@ -1,10 +1,14 @@
 import Image from "next/image";
+import Meta from "../components/Meta";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <nav className={`${styles.flex__between} ${styles.nav}`}>
+    <div className={styles.bg__paralax}>
+      <Meta />
+      <nav
+        className={`${styles.container} ${styles.flex__between} ${styles.nav}`}
+      >
         <a href="#">
           <Image
             className={styles.nav__logo}
@@ -51,11 +55,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.main__container}>
-          <h1 className="main__title">Model S</h1>
-          <span className="main__subtitle">
-            Order Online for
-            <a href="#"> Touchless Delivery</a>
-          </span>
+          <div className={styles.main__title}>
+            <h1>Model S</h1>
+            <span>
+              Order Online for <a href="#">Touchless Delivery</a>
+            </span>
+          </div>
+
           <div className={`${styles.flex__between} ${styles.main__buttons}`}>
             <button className="main__buttonItem">Custom Order</button>
             <button className="main__buttonItem">Existing Inventory</button>
@@ -63,7 +69,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
+      <footer className={`${styles.container} ${styles.footer}`}>
         <div className={`${styles.flex__between} ${styles.footer__container}`}>
           <a href="#" className="footer__link">
             Tesla C 2022
