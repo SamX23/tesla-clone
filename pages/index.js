@@ -63,35 +63,21 @@ export default function Home() {
           </div>
 
           <div className={`${styles.flex__between} ${styles.main__buttons}`}>
-            <button className="main__buttonItem">Custom Order</button>
-            <button className="main__buttonItem">Existing Inventory</button>
+            <button type="button">Custom Order</button>
+            <button type="button">Existing Inventory</button>
           </div>
         </div>
       </main>
 
       <footer className={`${styles.container} ${styles.footer}`}>
         <div className={`${styles.flex__between} ${styles.footer__container}`}>
-          <a href="#" className="footer__link">
-            Tesla C 2022
-          </a>
-          <a href="#" className="footer__link">
-            Privacy & Legal
-          </a>
-          <a href="#" className="footer__link">
-            Contact
-          </a>
-          <a href="#" className="footer__link">
-            Careers
-          </a>
-          <a href="#" className="footer__link">
-            News
-          </a>
-          <a href="#" className="footer__link">
-            Engage
-          </a>
-          <a href="#" className="footer__link">
-            Locations
-          </a>
+          <span>Tesla &copy; 2022</span>
+          <a href="#">Privacy &#38; Legal</a>
+          <a href="#">Contact</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+          <a href="#">Engage</a>
+          <a href="#">Locations</a>
         </div>
       </footer>
     </div>
