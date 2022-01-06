@@ -6,46 +6,48 @@ const Navigation = () => {
     <nav
       className={`${styles.container} ${styles.flex__between} ${styles.nav}`}
     >
-      <a href="#">
-        <Image
-          className={styles.nav__logo}
-          src="/Assets/tesla-logo.svg"
-          alt="Tesla Logo"
-          width="120"
-          height="30"
-        />
-      </a>
-
-      <div className={styles.nav__links}>
-        <a className={styles.nav__button} href="#" alt="#">
-          Model S
-        </a>
-        <a className={styles.nav__button} href="#" alt="#">
-          Model 3
-        </a>
-        <a className={styles.nav__button} href="#" alt="#">
-          Model X
-        </a>
-        <a className={styles.nav__button} href="#" alt="#">
-          Model Y
-        </a>
-        <a className={styles.nav__button} href="#" alt="#">
-          Solar Roof
-        </a>
-        <a className={styles.nav__button} href="#" alt="#">
-          Solar Panels
+      <div className={styles.nav__logo}>
+        <a href="#">
+          <Image
+            src="/Assets/tesla-logo.svg"
+            alt="Tesla Logo"
+            width="120"
+            height="30"
+          />
         </a>
       </div>
 
-      <div className={styles.nav__links}>
+      <div className={`${styles.nav__links} ${styles.nav__models}`}>
+        <a className={styles.nav__button} href="#" alt="#">
+          <span>Model S</span>
+        </a>
+        <a className={styles.nav__button} href="#" alt="#">
+          <span>Model 3</span>
+        </a>
+        <a className={styles.nav__button} href="#" alt="#">
+          <span>Model X</span>
+        </a>
+        <a className={styles.nav__button} href="#" alt="#">
+          <span>Model Y</span>
+        </a>
+        <a className={styles.nav__button} href="#" alt="#">
+          <span>Solar Roof</span>
+        </a>
+        <a className={styles.nav__button} href="#" alt="#">
+          <span>Solar Panels</span>
+        </a>
+        <div className={styles.hover__element}></div>
+      </div>
+
+      <div className={`${styles.nav__links} ${styles.nav__menu}`}>
         <a className={styles.nav__button} href="#">
-          Shop
+          <span>Shop</span>
         </a>
         <a className={styles.nav__button} href="#">
-          Account
+          <span>Account</span>
         </a>
         <button type="button" className={styles.nav__button}>
-          Menu
+          <span>Menu</span>
         </button>
       </div>
     </nav>

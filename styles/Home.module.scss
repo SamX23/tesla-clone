@@ -1,4 +1,6 @@
 $container: 1280px;
+$menuLinkWidth: 6rem;
+$menuLinkHeight: 2rem;
 
 .container {
   max-width: $container;
@@ -18,28 +20,60 @@ $container: 1280px;
   top: 0;
   left: 0;
   right: 0;
+  flex-flow: row wrap;
+}
+
+.nav__logo {
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 245px;
 }
 
 .nav__links {
   display: flex;
-  gap: 0.3rem;
+  position: relative;
+}
+
+.nav__models {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav__menu {
+  padding-right: 2rem;
 }
 
 .nav__button {
-  padding: 0.5rem 0.7rem;
-  color: #181b21;
-  border-radius: 15px;
+  color: #0c1016;
+  padding: 4px 8px;
+  border-radius: 13px;
   font-weight: 500;
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background-color: rgb(128, 128, 128, 0.2);
     transition: 0.5s ease-in-out;
+  }
+  span {
+    margin: 0 8px;
   }
   + button {
     background: none;
     font-size: inherit;
     font-family: inherit;
   }
+}
+
+.hover__element {
+  position: absolute;
+  height: $menuLinkHeight;
+  background-color: goldenrod;
+  top: 0;
+  left: 0;
 }
 
 .bg__paralax {
