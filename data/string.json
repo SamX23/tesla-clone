@@ -1,37 +1,44 @@
 [
   {
-    "title": "Model S",
+    "title": "Model 3",
     "subTitle": "Order Online for ",
-    "subTitleLink": "Touchless Delivery"
+    "subTitleLink": "Touchless Delivery",
+    "background": "/Assets/home-1.webp"
   },
   {
     "title": "Model Y",
     "subTitle": "Order Online for ",
-    "subTitleLink": "Touchless Delivery"
+    "subTitleLink": "Touchless Delivery",
+    "background": "/Assets/home-2.webp"
   },
   {
-    "title": "Model 3",
+    "title": "Model S",
     "subTitle": "Order Online for ",
-    "subTitleLink": "Touchless Delivery"
+    "subTitleLink": "Touchless Delivery",
+    "background": "/Assets/home-3.webp"
   },
   {
     "title": "Model X",
     "subTitle": "Order Online for ",
-    "subTitleLink": "Touchless Delivery"
+    "subTitleLink": "Touchless Delivery",
+    "background": "/Assets/home-4.webp"
   },
   {
     "title": "Solar Panels",
     "subTitle": "Lowest Cost Solar Panels in America",
-    "subTitleLink": ""
+    "subTitleLink": "",
+    "background": "/Assets/home-5.webp"
   },
   {
     "title": "Solar Roof",
     "subTitle": "Produce Clean Energy From Your Roof",
-    "subTitleLink": ""
+    "subTitleLink": "",
+    "background": "/Assets/home-6.webp"
   },
   {
     "title": "Accessories",
     "subTitle": "",
-    "subTitleLink": ""
+    "subTitleLink": "",
+    "background": "/Assets/home-7.webp"
   }
 ]
