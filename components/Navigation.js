@@ -3,9 +3,7 @@ import styles from "../styles/Home.module.scss";
 
 const Navigation = () => {
   return (
-    <nav
-      className={`${styles.container} ${styles.flex__between} ${styles.nav}`}
-    >
+    <nav className={`${styles.flex__between} ${styles.nav}`}>
       <div className={styles.nav__logo}>
         <a href="#">
           <Image
