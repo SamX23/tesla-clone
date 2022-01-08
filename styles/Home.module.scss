@@ -16,11 +16,11 @@ $menuLinkHeight: 2rem;
 
 .nav {
   height: 3.5rem;
-  position: absolute;
-  top: 0;
+  position: fixed;
   left: 0;
   right: 0;
   flex-flow: row wrap;
+  z-index: 99;
 }
 
 .nav__logo {
@@ -42,7 +42,7 @@ $menuLinkHeight: 2rem;
 }
 
 .nav__menu {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 
 .nav__button {
@@ -76,26 +76,27 @@ $menuLinkHeight: 2rem;
   left: 0;
 }
 
-.bg__paralax {
-  background-image: url("/Assets/home-1.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 .main {
   height: 100vh;
-  justify-content: center;
 }
 
 .main__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  // position: fixed;
+  align-items: center;
+  position: absolute;
   height: 100%;
+  width: 100%;
 }
 
 .main__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 14vh;
   text-align: center;
   h1 {
     margin-bottom: 0.2rem;
@@ -115,6 +116,8 @@ $menuLinkHeight: 2rem;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 11vh;
   button {
     width: 16rem;
     padding: 0.8rem 2rem;
@@ -124,13 +127,14 @@ $menuLinkHeight: 2rem;
     justify-content: center;
     cursor: pointer;
     text-transform: uppercase;
-    &:first-of-type {
+    &:first-of-type:not(:only-child),
+    &:only-child {
       opacity: 1;
       font-weight: bold;
       color: white;
       background-color: rgba(23, 26, 32, 0.8);
     }
-    &:last-of-type {
+    &:last-of-type:not(:only-child) {
       background-color: rgba(255, 255, 255, 0.8);
     }
   }
