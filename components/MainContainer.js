@@ -1,6 +1,8 @@
 import source from "../data/string.json";
-import MainSection from "./MainSection";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const MainSection = dynamic(() => import("./MainSection"));
 
 const MainContainer = () => {
   const [data, setData] = useState({});
