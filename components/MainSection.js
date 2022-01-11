@@ -12,10 +12,8 @@ const Container = styled.div`
 const MainSection = ({ data }) => {
   const item = data;
 
-  console.log(item);
-
   return (
-    <main className={`${styles.bg__paralax} ${styles.main}`}>
+    <main id={item.id} className={`${styles.bg__paralax} ${styles.main}`}>
       <Container className={styles.main__container} bg={item.background}>
         <Fade>
           <div className={styles.main__title}>

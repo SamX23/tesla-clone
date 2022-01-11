@@ -16,22 +16,22 @@ const Navigation = () => {
       </div>
 
       <div className={`${styles.nav__links} ${styles.nav__models}`}>
-        <a className={styles.nav__button} href="#" alt="#">
+        <a className={styles.nav__button} href="#1" alt="Model S">
           <span>Model S</span>
         </a>
-        <a className={styles.nav__button} href="#" alt="#">
+        <a className={styles.nav__button} href="#2" alt="Model 3">
           <span>Model 3</span>
         </a>
-        <a className={styles.nav__button} href="#" alt="#">
+        <a className={styles.nav__button} href="#3" alt="Model X">
           <span>Model X</span>
         </a>
-        <a className={styles.nav__button} href="#" alt="#">
+        <a className={styles.nav__button} href="#4" alt="Model Y">
           <span>Model Y</span>
         </a>
-        <a className={styles.nav__button} href="#" alt="#">
+        <a className={styles.nav__button} href="#5" alt="Solar Roof">
           <span>Solar Roof</span>
         </a>
-        <a className={styles.nav__button} href="#" alt="#">
+        <a className={styles.nav__button} href="#6" alt="Solar Panels">
           <span>Solar Panels</span>
         </a>
         <div className={styles.hover__element}></div>
