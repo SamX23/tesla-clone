@@ -142,7 +142,6 @@ $menuLinkHeight: 2rem;
 
 .footer {
   height: 4rem;
-  width: 100%;
   position: fixed;
   display: flex;
   bottom: 0;
@@ -152,7 +151,5 @@ $menuLinkHeight: 2rem;
 
 .footer__container {
   margin: auto;
-  width: 100%;
-  max-width: 50%;
-  font-size: small;
+  gap: 1rem;
 }
