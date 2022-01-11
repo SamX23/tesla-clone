@@ -1,18 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 
 const Navigation = () => {
   return (
     <nav className={`${styles.flex__between} ${styles.nav}`}>
       <div className={styles.nav__logo}>
-        <a href="#">
-          <Image
-            src="/Assets/tesla-logo.svg"
-            alt="Tesla Logo"
-            width="120"
-            height="30"
-          />
-        </a>
+        <Link href="/">
+          <a>
+            <Image
+              src="/Assets/tesla-logo.svg"
+              alt="Tesla Logo"
+              width="120"
+              height="30"
+            />
+          </a>
+        </Link>
       </div>
 
       <div className={`${styles.nav__links} ${styles.nav__models}`}>
@@ -38,10 +41,10 @@ const Navigation = () => {
       </div>
 
       <div className={`${styles.nav__links} ${styles.nav__menu}`}>
-        <a className={styles.nav__button} href="#">
+        <a className={styles.nav__button} href="#" alt="Shop">
           <span>Shop</span>
         </a>
-        <a className={styles.nav__button} href="#">
+        <a className={styles.nav__button} href="#" alt="Account">
           <span>Account</span>
         </a>
         <button type="button" className={styles.nav__button}>

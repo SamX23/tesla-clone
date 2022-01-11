@@ -18,10 +18,16 @@ const MainSection = ({ data }) => {
         <Fade>
           <div className={styles.main__title}>
             <h1>{item.title}</h1>
-            <span>
-              {item.subTitle}
-              <a href="#">{item.subTitleLink}</a>
-            </span>
+            {item.subTitle != "" && (
+              <span>
+                {item.subTitle}
+                {item.subTitleLink != "" && (
+                  <a href="#" alt={item.title}>
+                    {item.subTitleLink}
+                  </a>
+                )}
+              </span>
+            )}
           </div>
           {item.id == 7 ? (
             <div className={`${styles.main__buttons}`}>
