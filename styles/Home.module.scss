@@ -20,7 +20,7 @@ $menuLinkHeight: 2rem;
   left: 0;
   right: 0;
   flex-flow: row wrap;
-  z-index: 99;
+  z-index: 2;
 }
 
 .nav__logo {
@@ -77,7 +77,12 @@ $menuLinkHeight: 2rem;
 }
 
 .main {
+  position: relative;
+}
+
+.main__section {
   height: 100vh;
+  position: relative;
 }
 
 .main__container {
@@ -154,6 +159,88 @@ $menuLinkHeight: 2rem;
   gap: 1rem;
 }
 
+.sidebar__container {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000075;
+  backdrop-filter: blur(0.2rem);
+
+  .sidebar__fill {
+    float: right;
+    background-color: white;
+    width: 30%;
+    height: 100%;
+    .sidebar__header {
+      position: relative;
+      width: 100%;
+      height: 6rem;
+
+      .sidebar__close {
+        background-color: unset;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0.5rem;
+        font-size: large;
+        width: 2.5rem;
+        height: 2.5rem;
+        transition: 0.2s ease-in-out;
+        border-radius: 50%;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.302);
+        }
+      }
+    }
+    .sidebar__menu {
+      display: flex;
+      flex-direction: column;
+      margin: 0 2rem;
+      gap: 0.3rem;
+      .menu__item {
+        padding: 0.5rem 1rem;
+        border-radius: 15px;
+        background: none;
+        font-size: inherit;
+        font-family: inherit;
+        color: black;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.302);
+        }
+      }
+      .menu__itemOption {
+        display: flex;
+        justify-content: space-between;
+        &:nth-last-child(1) {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          > span {
+            margin-right: 1rem;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-weight: bold;
+            span:nth-child(2) {
+              color: gray;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
 @media screen and (max-width: 1200px) {
   .nav__models {
     display: none;
