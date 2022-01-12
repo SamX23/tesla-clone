@@ -153,3 +153,27 @@ $menuLinkHeight: 2rem;
   margin: auto;
   gap: 1rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .nav__models {
+    display: none;
+  }
+
+  .nav__menu {
+    a {
+      display: none;
+    }
+    button {
+      background-color: hsl(0deg 0% 0% / 5%);
+      backdrop-filter: blur(16px);
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__container {
+    flex-direction: column;
+  }
+}
