@@ -13,7 +13,7 @@ const MainSection = ({ data }) => {
   const item = data;
 
   return (
-    <main id={item.id} className={`${styles.bg__paralax} ${styles.main}`}>
+    <div id={item.id} className={styles.main__section}>
       <Container className={styles.main__container} bg={item.background}>
         <Fade>
           <div className={styles.main__title}>
@@ -41,7 +41,7 @@ const MainSection = ({ data }) => {
           )}
         </Fade>
       </Container>
-    </main>
+    </div>
   );
 };
 
