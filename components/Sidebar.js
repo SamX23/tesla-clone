@@ -10,15 +10,25 @@ const Container = styled.div`
     `}
 `;
 const Sidebar = ({ display }) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState();
 
   useEffect(() => setShow(display), [display]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    setShow((state) => !state);
+  };
 
   return (
     <Container className={styles.sidebar__container} display={show}>
       <div className={styles.sidebar__fill}>
         <div className={styles.sidebar__header}>
-          <button type="button" className={styles.sidebar__close}>
+          <button
+            type="button"
+            onClick={handleClick}
+            className={styles.sidebar__close}
+          >
             X
           </button>
         </div>

@@ -1,9 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "../styles/Home.module.scss";
 import Sidebar from "./Sidebar";
 
 const Navigation = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const clickHandler = (e) => {
+    e.preventDefault();
+    setShowSidebar((state) => !state);
+  };
+
   return (
     <>
       <nav className={`${styles.flex__between} ${styles.nav}`}>
@@ -49,12 +57,16 @@ const Navigation = () => {
           <a className={styles.nav__button} href="#" alt="Account">
             <span>Account</span>
           </a>
-          <button type="button" className={styles.nav__button}>
+          <button
+            type="button"
+            onClick={clickHandler}
+            className={styles.nav__button}
+          >
             <span>Menu</span>
           </button>
         </div>
       </nav>
-      <Sidebar display={false} />
+      <Sidebar display={showSidebar} />
     </>
   );
 };
