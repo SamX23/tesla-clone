@@ -62,9 +62,9 @@ $menuLinkHeight: 2rem;
     margin: 0 8px;
   }
   + button {
-    background: none;
-    font-size: inherit;
+    background-color: unset;
     font-family: inherit;
+    cursor: pointer;
   }
 }
 
